@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Eleme 账号-登录</title>
+		<link rel="icon" href="img/favicon.ico"/>
+		<style type="text/css">
+			/*通用设置*/
+			body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,figure,figcaption {
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				text-decoration: none;
+				color: #000000;
+			}
+			ul{
+				list-style-type: none;
+			}
+			/*1.页面设置*/
+			/*1.1头部设置*/
+			#header>.h-container{
+				width: 1240px;
+				margin: auto;
+			}
+			/*1.2躯干设置*/
+			#body{
+				height: 750px;
+				background-color: #F8FCFF;
+			}
+			#body>div{
+				position: relative;
+				width: 1240px;
+				height: 750px;
+				background: url(img/banner.png) no-repeat center;
+				background-color: #FFFFFF;
+				margin: auto;
+			}
+			#body>div>form{
+				padding: 70px 35px 30px;
+				position: absolute;
+				right: 100px;
+				top: 100px;
+				text-align: center;
+				background-color: #FFFFFF;
+			}
+			#body>div>form>input{
+				display: block;
+				width: 298px;
+				height: 50px;
+				font-size: 16px;
+				margin-top: 40px;
+				padding-left: 10px;
+			}
+			#body>div>form>input.login{
+				outline: 0;
+				border: 0;
+				cursor: pointer;
+				width: 312px;
+				height: 50px;
+				color: #ffffff;
+				background-color: #32a5e7;
+			}
+			#body>div>form>input.login:hover{
+				background-color: #2b8cc5;
+			}
+			#body>div>form>.title{
+				color: #00A7EA;
+				font-size: 18px;
+			}
+			#body>div>form>.error>img{
+				vertical-align: bottom;
+			}
+			#body>div>form>.error{
+				margin-top: 25px;
+				text-align: left;
+				width: 300px;
+				font-size: 12px;
+				padding: 10px 5px;
+				background-color: #FFD1CA;
+				visibility: hidden;
+			}
+			#body>div>form>.error>.close{
+				float: right;
+			}
+			#body>div>form>.policy>a{
+				color: #00A7EB;
+			}
+			#body>div>form>.jump{
+				width: 312px;
+				margin-top: 10px;
+			}
+			#body>div>form>.jump>a{
+				color: #00A7EB;
+			}
+			#body>div>form>.jump>a:first-child{
+				float: left;
+			}
+			#body>div>form>.jump>a:last-child{
+				float: right;
+			}
+			/*1.3页面底部*/
+			#footer>:before{
+				content: "";
+				display: table;
+			}
+			#footer>.f-container{
+				width: 1240px;
+				height: 50px;
+				margin: 20px auto;
+				box-sizing: border-box;
+			}
+			#footer>.f-container:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			#footer>.f-container:before{
+				content: "";
+				display: table;
+			}
+			#footer>.f-container>ul{
+				float: left;
+				padding-top: 17px;
+				font-size: 14px;
+			}
+			#footer>.f-container>ul:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			#footer>.f-container>.one{
+				margin-left: 40px;
+			}
+			#footer>.f-container>.one>li{
+				float: left;
+			}
+			#footer>.f-container>.one>span{
+				height: 10px;
+				border-left: 1px solid darkgray;
+				float: left;
+				margin-top: 6px;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			#footer>.f-container>.two>li{
+				float: left;
+				margin-left: 50px;
+			}
+			#footer>.f-container>.two>li>a{
+				background-color: #32A5E7;
+				border-radius: 4px;
+				color: #FFFFFF;
+				padding: 0px 3px;
+			}
+			#footer>.f-container>.link{
+				position: relative;
+				float: right;
+				margin-top: 6px;
+				margin-right: 120px;
+			}
+			#footer>.f-container>.link>.erweima{
+				position: absolute;
+				bottom: -3px;
+				right: -58px;
+				display: none;
+				z-index: 1;
+			}
+			#footer>.f-container>.link>a>img{
+				margin-right: 20px;
+				position: relative;
+				z-index: 5;
+			}
+			#footer>.f-container>.link>a>.weibo:hover{
+				content: url(img/weibo-h.png);
+			}
+			#footer>.f-container>.link>a>.weixin:hover{
+				content: url(img/weixin-h.png);
+			}
+			#footer>.f-container>.link>a>.zone:hover{
+				content: url(img/qqzone-h.png);
+			}
+			#footer>.foot-dsc{
+				width: 1240px;
+				margin: auto;
+				color: #7f7f7f;
+				font-size: 12px;
+				padding-bottom: 30px;
+			}
+			#footer>.foot-dsc>span{
+				margin-left: 40px;
+			}
+			#footer>.foot-dsc>a{
+				margin-left: 10px;
+				color: #7f7f7f;
+			}
+			#footer>.foot-dsc>a:hover{
+				color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div class="h-container">
+				<img src="img/logo.png"/>				
+			</div>
+		</div>
+		<div id="body">
+			<div>
+				<form id="login" action="" method="post" enctype="application/x-www-form-urlencoded">
+					<div class="title">账号登录</div>
+					<div class="error">
+						<img src="img/error-ico.png" alt="错误"/>
+						<span class="err-msg"></span>
+						<img class="close" src="img/close-ico.png" alt="关闭" />
+					</div>
+					<input type="text" name="uname" id="uname" value="" placeholder="用户名"/>
+					<input type="password" name="upwd" id="upwd" value="" placeholder="密码"/>
+					<input class="login" type="button" id="submit" value="立即登录" />
+					<div class="jump">
+						<a href="register.html">注册</a>
+						<a href="javascript:">忘记密码?</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="f-container">
+				<ul class="one">
+					<li><a href="javascript:void(0)">关于一乐</a></li>
+					<span></span>
+					<li><a href="javascript:void(0)">工作机会</a></li>
+					<span></span>
+					<li><a href="javascript:void(0)">联系我们</a></li>
+					<span></span>
+					<li><a href="javascript:void(0)">法律声明</a></li>
+					<span></span>
+				</ul>
+				<ul class="two">
+					<li>客服热线&nbsp;&nbsp;&nbsp;&nbsp;400-788-3333</li>
+					<li><a href="#">在线客服</a></li>
+				</ul>
+				<div class="link">
+					<a href="http://weibo.com/meizumobile" target="_blank"><img class="weibo" src="img/weibo.png" alt="微博"/></a>
+					<a class="wx-h" href="javascript:"><img class="weixin" src="img/weixin.png" alt="微信"/></a>
+					<a href="https://user.qzone.qq.com/2762957059" target="_blank"><img class="zone" src="img/qqzone.png" alt="QQ空间"/></a>
+					<img class="erweima" src="img/weixin-erweima.png"/>
+				</div>
+			</div>
+			<div class="foot-dsc">
+				<span>©2018 Meizu Telecom Equipment Co., Ltd. All rights reserved.</span>
+				<a href="http://www.miitbeian.gov.cn/" target="_blank">备案号: 粤ICP备13003602号-4</a>
+				<a href="http://www3.res.meizu.com/static/cn/widget/footer/images/icp2_b2dcb54.jpg" target="_blank">经营许可证编号: 粤B2-20130198</a>
+				<a href="http://www2.res.meizu.com/zh_cn/images/common/com_licence.jpg" target="_blank">营业执照</a>
+				<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44049102496076" target="_blank"><img width="12" height="12" src="img/ghs.png"/>粤公网安备 44049102496076号</a>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/login.js"></script>
+		<script type="text/javascript">
+			var weixin = document.querySelector(".weixin");
+			weixin.onmouseenter = function(){
+				this.parentNode.parentNode.lastElementChild.style.display = "block";
+			}
+			weixin.onmouseleave = function(){
+				this.parentNode.parentNode.lastElementChild.style.display = "none";
+			}
+		</script>
+	</body>
+</html>

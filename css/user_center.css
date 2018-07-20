@@ -1,0 +1,15 @@
+/***通用设置***/
+body{
+	color: #515151;
+}
+body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,figure,figcaption,hr,input {
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+}
+ul{
+	list-style-type: none;
+}

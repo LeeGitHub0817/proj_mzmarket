@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>一乐官网-一乐电子商城官方网站</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="icon" href="img/favicon.ico"/>
+		<style type="text/css">
+			/***轮播按钮样式***/
+			#banner>.banner-container>ul.btn-link:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			#banner>.banner-container>ul.btn-link{
+				position: absolute;
+				bottom: 20px;
+				left: 400px;
+			}
+			#banner>.banner-container>ul.btn-link>li{
+				float: left;
+				width: 12px;
+				height: 12px;
+				background-color: #FFFFFF;
+				margin-right: 12px;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+			#banner>.banner-container>ul.btn-link>li.active{
+				background-color: #00A7EB;
+			}
+			
+			/***1.用户信息***/
+			/***1.1登陆前***/
+			#menu>.menu-container>.user>.loginlist{
+				position: relative;
+			}
+			#menu>.menu-container>.user>.loginlist:hover ul{
+				display: block;
+			}
+			#menu>.menu-container>.user>.loginlist>ul{
+				position: absolute;
+				left: -35px;
+				background-color: #FFFFFF;
+				z-index: 10;
+				width: 90px;
+				box-shadow: 0 0 0.5px 0.5px #DCDCDC;
+				display: none;
+			}
+			#menu>.menu-container>.user>.loginlist>ul>li>a{
+				display: block;
+				padding: 5px 20px;
+				font-size: 12px;
+				margin: 5px 0;
+			}
+			#menu>.menu-container>.user>.loginlist>ul>li>a:hover{
+				color: #31a5e7;
+				background-color: #EEEEEE;
+			}
+			#menu>.menu-container>.user>.loginlist>a{
+				display: block;
+				width: 24px;
+				height: 24px;
+				margin-top: 5px;
+			}
+			#menu>.menu-container>.user>.loginlist>a>img{
+				display: block;
+				width: 24px;
+				height: 24px;
+			}
+			/***1.2登陆后***/
+			#menu>.menu-container>.user>.welcomelist{
+				display: none;
+				position: relative;
+			}
+			#menu>.menu-container>.user>.welcomelist:hover ul{
+				display: block;
+			}
+			#menu>.menu-container>.user>.welcomelist>ul{
+				position: absolute;
+				left: -35px;
+				background-color: #FFFFFF;
+				z-index: 10;
+				width: 90px;
+				box-shadow: 0 0 0.5px 0.5px #DCDCDC;
+				display: none;
+			}
+			#menu>.menu-container>.user>.welcomelist>ul>li>a{
+				display: block;
+				padding: 5px 20px;
+				font-size: 12px;
+				margin: 5px 0;
+			}
+			#menu>.menu-container>.user>.welcomelist>ul>li>a:hover{
+				color: #31a5e7;
+				background-color: #EEEEEE;
+			}
+			#menu>.menu-container>.user>.welcomelist>a{
+				display: block;
+				width: 24px;
+				height: 24px;
+				margin-top: 5px;
+			}
+			#menu>.menu-container>.user>.welcomelist>a>img{
+				display: block;
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--1.1网页头部-->
+		<div id="header">
+			<div class="nav-container">
+				<ul class="ul-left">
+					<li><a href="javascript:">商城</a></li>
+					<li><a href="javascript:">高端</a></li>
+					<li><a href="javascript:">实惠</a></li>
+					<li><a href="javascript:">Eleme</a></li>
+					<li><a href="javascript:">云服务</a></li>
+					<li><a href="javascript:">专卖店</a></li>
+					<li><a href="javascript:">服务支持</a></li>
+					<li><a href="javascript:">社区</a></li>
+				</ul>
+				<ul class="ul-right">
+					<li><a href="javascript:">Select Region</a></li>
+					<li><a href="javascript:">APP下载</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--1.2网页头部-->
+		<div id="menu">
+			<div class="menu-container">
+				<div class="logo">
+					<a href="index.html"></a>
+				</div>
+				<a class="shopping-cart" href="cart.html"></a>
+				<div class="user">
+					<div id="loginlist" class="loginlist">
+						<a href=""><img src="img/index/icon-user.jpg"/></a>
+						<ul>
+							<li><a id="btn-login" href="#">立即登录</a></li>
+							<li><a href="register.html">立即注册</a></li>
+						</ul>
+					</div>
+					<div id="welcomelist" class="welcomelist">
+						<a class="avator" href=""><img src="img/header/avator/yaya.jpg"/></a>
+						<ul>
+							<li><a href="user_center.html">个人中心</a></li>
+							<li><a id="btn-signout" href="#">退出登录</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="search">
+					<input type="text" name="search" id="search" value="" placeholder="魅族 15"/>
+					<a id="searchBtn" href="#"></a>
+				</div>
+				<ul class="link">
+					<li>
+						<a data-toggle="menu" href="#sub1">高配手机</a>
+						<div data-toggle="menu" href="#sub1" class="header-sub" id="sub1">
+							<div class="header-sub-container">
+								<ul>
+									<li>
+										<a style="background-image: url(img/index/subs/1-1.png);" href="product_detail.html?pid=21">
+											魅族15
+											<em>￥2499起</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/1-2.png);" href="product_detail.html?pid=29">
+											魅族15 Plus
+											<em>￥2999起</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/1-3.png);" href="product_detail.html?pid=35">
+											魅族 M15
+											<em>￥1699</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/1-4.png);" href="product_detail.html?pid=1">
+											魅族 PRO 7
+											<em>￥1299起</em>	
+										</a>							
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/1-5.jpg);" href="product_detail.html?pid=48">
+											华为 P10
+											<em>￥3488起</em>
+										</a>							
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/1-6.jpg);" href="product_detail.html?pid=54">
+											三星 S8
+											<em>￥4999起</em>
+										</a>			
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</li>
+					<li>
+						<a data-toggle="menu" href="#sub2">实惠手机</a>
+						<div data-toggle="menu" href="#sub2" class="header-sub" id="sub2">
+							<div class="header-sub-container">
+								<ul>
+									<li>
+										<a style="background-image: url(img/index/subs/2-1.png);" href="javascript:void(0)">
+											魅蓝6T
+											<em>￥799起</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/2-2.png);" href="product_detail.html?pid=38">
+											魅蓝E3
+											<em>￥1799起</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/2-3.png);" href="javascript:void(0)">
+											魅蓝 S6
+											<em>￥999起</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/2-4.png);" href="product_detail.html?pid=9">
+											魅蓝 6
+											<em>￥599起</em>	
+										</a>							
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/2-5.png);" href="product_detail.html?pid=15">
+											魅蓝Note6
+											<em>￥799起</em>
+										</a>							
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/2-6.png);" href="product_detail.html?pid=42">
+											魅蓝E2
+											<em>￥899</em>
+										</a>			
+									</li>
+								</ul>
+							</div>
+						</div>						
+					</li>
+					<li>
+						<a data-toggle="menu" href="#sub3">悦耳声学</a>
+						<div data-toggle="menu" href="#sub3" class="header-sub" id="sub3">
+							<div class="header-sub-container">
+								<ul>
+									<li>
+										<a style="background-image: url(img/index/subs/3-1.png);" href="product_detail.html?pid=60">
+											POP蓝牙耳机
+											<em>￥499</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/3-2.png);" href="product_detail.html?pid=61">
+											HALO激光蓝牙耳机
+											<em>￥999</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/3-3.png);" href="product_detail.html?pid=63">
+											魅族 LIVE
+											<em>￥1299</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/3-4.png);" href="product_detail.html?pid=64">
+											Flow Bass
+											<em>￥599</em>	
+										</a>							
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/3-5.png);" href="product_detail.html?pid=66">
+											魅族 EP51
+											<em>￥179</em>
+										</a>							
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/3-6.png);" href="product_detail.html?pid=77">
+											魅族蓝牙小音箱
+											<em>￥99</em>
+										</a>			
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/3-7.png);" href="product_detail.html?pid=58">
+											魅族 EP2X
+											<em>￥89</em>
+										</a>			
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/3-8.png);" href="product_detail.html?pid=68">
+											魅蓝 EP52
+											<em>￥269</em>
+										</a>			
+									</li>
+								</ul>
+							</div>				
+						</div>						
+					</li>
+					<li>
+						<a data-toggle="menu" href="#sub4">智能·配件</a>
+						<div data-toggle="menu" href="#sub4" class="header-sub" id="sub4">
+							<div class="header-sub-container">
+								<ul>
+									<li>
+										<a style="background-image: url(img/index/subs/4-1.png);" href="product_detail.html?pid=72">
+											魅蓝双向闪充移动电源
+											<em>￥159起</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/4-2.png);" href="javascript:void(0)">
+											魅族无线充电器
+											<em>￥99</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/4-3.png);" href="javascript:void(0)">
+											魅族智能路由器
+											<em>￥69</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/4-4.png);" href="product_detail.html?pid=76">
+											魅族手环
+											<em>￥169</em>	
+										</a>							
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/4-5.png);" href="javascript:void(0)">
+											魅族盒子
+											<em>￥199</em>
+										</a>							
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/4-6.png);" href="javascript:void(0)">
+											魅族路由器
+											<em>￥99</em>
+										</a>			
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/4-7.png);" href="javascript:void(0)">
+											双口快充旅行充电器
+											<em>￥89</em>
+										</a>			
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/4-8.png);" href="javascript:void(0)">
+											 魅族USB数据线
+											<em>￥29</em>
+										</a>			
+									</li>
+								</ul>
+							</div>				
+						</div>						
+					</li>
+					<li>
+						<a data-toggle="menu" href="#sub5">生活周边</a>
+						<div data-toggle="menu" href="#sub5" class="header-sub" id="sub5">
+							<div class="header-sub-container">
+								<ul>
+									<li>
+										<a style="background-image: url(img/index/subs/5-1.png);" href="product_detail.html?pid=79">
+											魅蓝 休闲旅行双肩包
+											<em>￥189</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/5-2.png);" href="javascript:void(0)">
+											魅族智能路由器
+											<em>￥69</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/5-3.png);" href="javascript:void(0)">
+											魅蓝胸包
+											<em>￥109起</em>
+										</a>
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/5-4.png);" href="javascript:void(0)">
+											魅蓝数码收纳包
+											<em>￥59</em>	
+										</a>							
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/5-5.png);" href="javascript:void(0)">
+											酷MA萌可变形颈枕
+											<em>￥79</em>
+										</a>							
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/5-6.png);" href="javascript:void(0)">
+											酷MA萌旅行套装
+											<em>￥599</em>
+										</a>			
+									</li>
+									<li>
+										<a style="background-image: url(img/index/subs/5-7.png);" href="javascript:void(0)">
+											酷MA萌冰敷眼罩
+											<em>￥19</em>
+										</a>			
+									</li>
+								</ul>
+							</div>				
+						</div>						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--2网页躯干-->
+		<!--2.1轮播图-->
+		<div id="banner">
+			<div class="banner-container">
+				<ul class="banner-img">
+					<p style="position: relative; left: 600px;"><img src="img/lazyload-b3704113c8.gif"/></p>
+					<!--<li>
+						<a href="javascript:"><img src="img/index/banner/1.jpg"/></a>	
+					</li>
+					<li>
+						<a href="javascript:"><img src="img/index/banner/2.jpg"/></a>
+					</li>
+					<li>
+						<a href="javascript:"><img src="img/index/banner/3.jpg"/></a>	
+					</li>
+					<li>
+						<a href="javascript:"><img src="img/index/banner/4.jpg"/></a>
+					</li>
+					<li>
+						<a href="javascript:"><img src="img/index/banner/5.jpg"/></a>						
+					</li>
+					<li>
+						<a href="javascript:"><img src="img/index/banner/6.jpg"/></a>
+					</li>
+					<li>
+						<a href="javascript:"><img src="img/index/banner/7.jpg"/></a>
+					</li>-->
+				</ul>
+				<ul class="btn-link">
+					<!--<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>-->
+				</ul>
+				<div class="category">
+					<ul>
+						<li><a href="">手机</a></li>
+						<li><a href="product_search.html">智能设备</a></li>
+						<li><a href="">智能穿戴</a></li>
+						<li><a href="">游戏设备</a></li>
+						<li><a href="">数码影音</a></li>
+						<li><a href="">手机配件/移动电源</a></li>
+						<li><a href="">移动存储/办公设备</a></li>
+						<li><a href="">生活周边</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--2.2推荐项目-->
+		<div id="recommend">
+			<div class="re-container">
+				<div><a href="https://hd.meizu.com/sale/welfare.html?click=gw_index_xj_1"><img src="img/index/ad1.jpg" alt="推荐1"/></a></div>
+				<div><a href="https://mk.meizu.com/?click=gw_index_xj_2"><img src="img/index/ad2.jpg"/></a></div>
+				<div><a href="https://hd.meizu.com/activity/newin.html?click=gw_index_xj_3"><img src="img/index/ad3.jpg"/></a></div>
+				<div><a href="https://hd.meizu.com/activity/appzxjpc.html?click=gw_index_xj_4"><img src="img/index/ad4.jpg"/></a></div>
+			</div>
+		</div>
+		<!--2.3热卖商品-->
+		<div id="hot-sale">
+			<div class="title"><h1>热卖商品</h1></div>
+			<div class="hotsale-container">
+				<p style="position: relative; left: 600px;"><img src="img/lazyload-b3704113c8.gif"/></p>
+				<!--<div>
+					<a href="">
+						<img src="img/index/hot/hot1.png"/>
+						<p class="name">魅族 PRO 7</p>
+						<p class="desc">领券最高立减500元</p>
+						<p class="price"><i>￥</i><span>1999</span><em>起</em></p>
+					</a>	
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/hot/hot2.png"/>
+						<p class="name">魅蓝 6</p>
+						<p class="desc">领券最高减100元 享3期免息</p>
+						<p class="price"><i>￥</i><span>599</span><em>起</em></p>
+					</a>	
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/hot/hot3.png"/>
+						<p class="name">魅蓝 Note6</p>
+						<p class="desc">领券最高减150元</p>
+						<p class="price"><i>￥</i><span>799</span><em>起</em></p>
+					</a>	
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/hot/hot4.png"/>
+						<p class="name">魅族 EP2X耳机</p>
+						<p class="desc">契合声音的流动之美</p>
+						<p class="price"><i>￥</i><span>69</span></p>
+					</a>	
+				</div>-->
+			</div>
+		</div>
+		<!--2.4手机-->
+		<div id="phone">
+			<div class="title"><h1>手机</h1></div>
+			<div class="phone-container-one">
+				<p style="position: relative; left: 600px;"><img src="img/lazyload-b3704113c8.gif"/></p>
+				<!--<div><a href=""><img src="img/index/phone/phone1.jpg"/></a></div>
+				<div><a href=""><img src="img/index/phone/phone2.jpg"/></a></div>
+				<div><a href=""><img src="img/index/phone/phone3.jpg"/></a></div>
+				<div><a href=""><img src="img/index/phone/phone4.jpg"/></a></div>-->
+			</div>
+			<div class="phone-container-two">
+				<p style="position: relative; left: 600px;"><img src="img/lazyload-b3704113c8.gif"/></p>
+				<!--<div>
+					<a href="">
+						<img src="img/index/phone/sale1.png"/>
+						<p class="name">魅族 15</p>
+						<p class="desc">2000万暗光双摄 智能美颜</p>
+						<p class="price"><i>￥</i><span>2499</span><em>起</em></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/phone/sale2.png"/>
+						<p class="name">魅族 15 Plus</p>
+						<p class="desc">定制全面屏 人机交互新体验</p>
+						<p class="price"><i>￥</i><span>2999</span><em>起</em></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/phone/sale3.png"/>
+						<p class="name">魅族 M15</p>
+						<p class="desc">支持人脸识别 抬腕即解锁</p>
+						<p class="price"><i>￥</i><span>1699</span><em>起</em></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/phone/sale4.png"/>
+						<p class="name">魅族 PRO 7系列</p>
+						<p class="desc">最高优惠1200元</p>
+						<p class="price"><i>￥</i><span>1299</span><em>起</em></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/phone/sale5.jpg"/>
+						<p class="name">魅蓝 Note6</p>
+						<p class="desc">领券最高减200元</p>
+						<p class="price"><i>￥</i><span>799</span><em>起</em></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/phone/sale6.jpg"/>
+						<p class="name">魅蓝 6</p>
+						<p class="desc">限时领券最高减150元</p>
+						<p class="price"><i>￥</i><span>599</span><em>起</em></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/phone/sale7.png"/>
+						<p class="name">魅蓝 E3</p>
+						<p class="desc">玩得畅快 拍得清晰</p>
+						<p class="price"><i>￥</i><span>1799</span><em>起</em></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/phone/sale8.png"/>
+						<p class="name">魅蓝 E2</p>
+						<p class="desc">领券立减80元</p>
+						<p class="price"><i>￥</i><span>899</span><em>起</em></p>
+					</a>
+				</div>-->
+			</div>
+		</div>
+		<!--2.5智能配件-->
+		<div id="smart">
+			<div class="title"><h1>智能配件</h1></div>
+			<div class="smart-container-one">
+				<p style="position: relative; left: 600px;"><img src="img/lazyload-b3704113c8.gif"/></p>
+				<!--<div><a href=""><img src="img/index/smart/smart1.jpg"/></a></div>
+				<div><a href=""><img src="img/index/smart/smart2.jpg"/></a></div>
+				<div><a href=""><img src="img/index/smart/smart3.jpg"/></a></div>
+				<div><a href=""><img src="img/index/smart/smart4.jpg"/></a></div>-->
+			</div>
+			<div class="smart-container-two">
+				<p style="position: relative; left: 600px;"><img src="img/lazyload-b3704113c8.gif"/></p>
+				<!--<div>
+					<a href="">
+						<img src="img/index/smart/sb1.png"/>
+						<p class="name">魅蓝双向移动电源</p>
+						<p class="desc">新品上市 火热抢购</p>
+						<p class="price"><i>￥</i><span>169</span></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/smart/sb2.png"/>
+						<p class="name">魅蓝20寸 酷MA萌 旅行箱</p>
+						<p class="desc">静音双排万向轮设计</p>
+						<p class="price"><i>￥</i><span>349</span></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/smart/sb3.png"/>
+						<p class="name">魅族 Flow 三单元耳机</p>
+						<p class="desc">用的惬意 听得尽兴</p>
+						<p class="price"><i>￥</i><span>599</span></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/smart/sb4.png"/>
+						<p class="name">魅族 EP51蓝牙运动耳机</p>
+						<p class="desc">丛林绿/云雾蓝新品开售</p>
+						<p class="price"><i>￥</i><span>229</span></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/smart/sb5.png"/>
+						<p class="name">魅族 EP2X耳机</p>
+						<p class="desc">契合声音的流动之美</p>
+						<p class="price"><i>￥</i><span>89</span></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/smart/sb6.png"/>
+						<p class="name">魅族智能体脂秤</p>
+						<p class="desc">精准的数字 才是真实的你</p>
+						<p class="price"><i>￥</i><span>99</span><em>起</em></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/smart/sb7.png"/>
+						<p class="name">魅蓝EP52蓝牙耳机</p>
+						<p class="desc">新品到货 限量抢购</p>
+						<p class="price"><i>￥</i><span>299</span></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/smart/sb8.png"/>
+						<p class="name">魅族HD50 头戴式耳机</p>
+						<p class="desc">清新简洁，有音质更有颜值</p>
+						<p class="price"><i>￥</i><span>399</span></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/smart/sb9.png"/>
+						<p class="name">魅族手环</p>
+						<p class="desc">腕间流动的心率专家 智能美颜</p>
+						<p class="price"><i>￥</i><span>169</span></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/smart/sb10.png"/>
+						<p class="name">魅族蓝牙小音箱</p>
+						<p class="desc">好音感 直达心灵</p>
+						<p class="price"><i>￥</i><span>169</span></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/smart/sb11.png"/>
+						<p class="name">魅蓝旅行包</p>
+						<p class="desc">青春正好，即刻出发</p>
+						<p class="price"><i>￥</i><span>269</span></p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="img/index/smart/sb12.png"/>
+						<p class="name">魅蓝 休闲旅行双肩包</p>
+						<p class="desc">曲面一体式 多功能隔层</p>
+						<p class="price"><i>￥</i><span>199</span></p>
+					</a>
+				</div>-->
+			</div>
+		</div>
+		<!--3网页底部-->
+		<div id="footer">
+			<div class="footer-container">
+				<div class="left">
+					<ul>
+						<li><a href=""><img src="img/index/sf.png"/><span>全场顺丰包邮</span></a></li>
+						<li><a href=""><img src="img/index/sd.png"/><span>百城速达</span></a></li>
+						<li><a href=""><img src="img/index/th.png"/><span>7天无理由退货</span></a></li>
+						<li><a href=""><img src="img/index/bz.png"/><span>15天换货保障</span></a></li>
+						<li><a href=""><img src="img/index/wx.png"/><span>1年免费保修</span></a></li>
+						<li><a href=""><img src="img/index/ty.png"/><span>线下体验店</span></a></li>
+						<li><a href=""><img src="img/index/zc.png"/><span>远程支持服务</span></a></li>
+						<li><a href=""><img src="img/index/kx.png"/><span>上门快修</span></a></li>
+					</ul>
+				</div>
+				<div class="right">
+					<p>周一至周日 7:30-24:00</p>
+					<p>400-788-3333</p>
+					<a href=""><img src="img/kefu.png"/><span>在线客服</span></a>
+				</div>
+			</div>
+			<div class="footer-other">
+				<ul class="ul-one">
+					<li><a href="">了解一乐</a></li>
+					<span></span>
+					<li><a href="">加入我们</a></li>
+					<span></span>
+					<li><a href="">联系我们</a></li>
+					<span></span>
+					<li><a href="">Eleme</a></li>
+					<span></span>
+					<li><a href="">一乐社区</a></li>
+					<span></span>
+					<li><a href="">天猫旗舰店</a></li>
+					<span></span>
+					<li><a href="">问题反馈</a></li>
+					<span></span>
+					<li><a href="">线上销售授权名单公示</a></li>
+				</ul>
+				<ul class="ul-two">
+					<li>©2018 Meizu Telecom Equipment Co., Ltd. All rights reserved.</li>
+					<li class="color"><a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备13003602号</a></li>
+					<li class="color"><a href="https://www3.res.meizu.com/static/cn/_partial/footer/images/icp2_fb8db74.jpg" target="_blank">合字B2-20170010</a></li>
+					<li class="color"><a href="https://www3.res.meizu.com/static/cn/_partial/footer/images/com_licence_b00fe42.jpg" target="_blank">营业执照</a></li>
+					<li class="color"><a href="https://www.meizu.com/legal.html" target="_blank">法律声明</a></li>
+					<li><img style="vertical-align: bottom;" src="img/footer/pl.png"/>粤公网安备 44049102496009 号</li>
+					<li class="icon one"><a href="http://210.76.65.188/" target="_blank"></a></li>
+					<li class="icon two"><a href="http://210.76.65.188/webrecord/innernet/Welcome.jsp?bano=4404013010531" target="_blank"></a></li>
+					<li class="icon three"><a href="https://credit.szfw.org/CX20151204012550820380.html" target="_blank"></a></li>
+				</ul>
+				<div class="social">
+					<div></div>
+					<div class="wx"></div>
+					<div></div>
+					<img width="150" height="150" src="img/footer/erweima.png"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript">
+		//微信二维码弹出
+		var wx = document.querySelector("#footer>.footer-other>.social>.wx");
+		wx.onmouseenter = function(){
+			this.parentElement.lastElementChild.style.display = "block";
+		}
+		wx.onmouseleave = function(){
+			this.parentElement.lastElementChild.style.display = "none";
+		}
+	</script>
+</html>

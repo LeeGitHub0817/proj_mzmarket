@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Eleme 账号-注册</title>
+		<link rel="icon" href="img/favicon.ico"/>
+		<style type="text/css">
+			/*通用设置*/
+			body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,figure,figcaption {
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				text-decoration: none;
+				color: #000000;
+			}
+			ul{
+				list-style-type: none;
+			}
+			/*1.页面样式*/
+			/*1.1页面头部*/
+			#header>.h-container{
+				width: 1240px;
+				margin: auto;
+			}
+			
+			/*1.2页面躯干*/
+			#body{
+				height: 750px;
+				background-color: #F8FCFF;
+			}
+			#body>div{
+				position: relative;
+				width: 1240px;
+				height: 750px;
+				background: url(img/banner.png) no-repeat center;
+				background-color: #FFFFFF;
+				margin: auto;
+			}
+			#body>div>form{
+				padding: 40px 35px 30px;
+				position: absolute;
+				right: 100px;
+				top: 40px;
+				text-align: center;
+				background-color: #FFFFFF;
+			}
+			#body>div>form>input{
+				display: block;
+				width: 298px;
+				height: 30px;
+				font-size: 14px;
+				margin-top: 20px;
+				padding-left: 10px;
+			}
+			#body>div>form>input.register{
+				outline: 0;
+				border: 0;
+				cursor: pointer;
+				width: 310px;
+				height: 50px;
+				color: #ffffff;
+				background-color: #32a5e7;
+			}
+			#body>div>form>input.register:hover{
+				background-color: #2b8cc5;
+			}
+			#body>div>form>select{
+				margin-top: 20px;
+				color: #757575;
+			}
+			#body>div>form>.title{
+				color: #00A7EA;
+				font-size: 18px;
+			}
+			#body>div>form>.error>img{
+				vertical-align: bottom;
+			}
+			#body>div>form>.error{
+				text-align: left;
+				width: 300px;
+				font-size: 12px;
+				padding: 10px 5px;
+				background-color: #FFD1CA;
+				visibility: hidden;
+				margin-top: 15px;
+			}
+			#body>div>form>.error>.close{
+				float: right;
+			}
+			#body>div>form>.ok>img{
+				vertical-align: bottom;
+			}
+			#body>div>form>.ok{
+				text-align: left;
+				width: 300px;
+				font-size: 12px;
+				padding: 10px 5px;
+				background-color: #00A7EA;
+				visibility: hidden;
+				/*margin-top: 15px;*/
+				color: #FFFFFF;
+			}
+			
+			#body>div>form>.policy{
+				width: 308px;
+				font-size: 12px;
+				text-align: left;
+				margin-top: 20px;
+			}
+			#body>div>form>.policy>a{
+				color: #00A7EB;
+			}
+			/*1.3页面底部*/
+			#footer>:before{
+				content: "";
+				display: table;
+			}
+			#footer>.f-container{
+				width: 1240px;
+				height: 50px;
+				margin: 20px auto;
+				box-sizing: border-box;
+			}
+			#footer>.f-container:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			#footer>.f-container:before{
+				content: "";
+				display: table;
+			}
+			#footer>.f-container>ul{
+				float: left;
+				padding-top: 17px;
+				font-size: 14px;
+			}
+			#footer>.f-container>ul:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			#footer>.f-container>.one{
+				margin-left: 40px;
+			}
+			#footer>.f-container>.one>li{
+				float: left;
+			}
+			#footer>.f-container>.one>span{
+				height: 10px;
+				border-left: 1px solid darkgray;
+				float: left;
+				margin-top: 6px;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			#footer>.f-container>.two>li{
+				float: left;
+				margin-left: 50px;
+			}
+			#footer>.f-container>.two>li>a{
+				background-color: #32A5E7;
+				border-radius: 4px;
+				color: #FFFFFF;
+				padding: 0px 3px;
+			}
+			#footer>.f-container>.link{
+				position: relative;
+				float: right;
+				margin-top: 6px;
+				margin-right: 120px;
+			}
+			#footer>.f-container>.link>.erweima{
+				position: absolute;
+				bottom: -3px;
+				right: -58px;
+				display: none;
+				z-index: 1;
+			}
+			#footer>.f-container>.link>a>img{
+				margin-right: 20px;
+				position: relative;
+				z-index: 5;
+			}
+			#footer>.f-container>.link>a>.weibo:hover{
+				content: url(img/weibo-h.png);
+			}
+			#footer>.f-container>.link>a>.weixin:hover{
+				content: url(img/weixin-h.png);
+			}
+			#footer>.f-container>.link>a>.zone:hover{
+				content: url(img/qqzone-h.png);
+			}
+			#footer>.foot-dsc{
+				width: 1240px;
+				margin: auto;
+				color: #7f7f7f;
+				font-size: 12px;
+				padding-bottom: 30px;
+			}
+			#footer>.foot-dsc>span{
+				margin-left: 40px;
+			}
+			#footer>.foot-dsc>a{
+				margin-left: 10px;
+				color: #7f7f7f;
+			}
+			#footer>.foot-dsc>a:hover{
+				color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div class="h-container">
+				<img src="img/logo.png"/>				
+			</div>
+		</div>
+		<div id="body">
+			<div>
+				<form id="register" action="" method="post" enctype="application/x-www-form-urlencoded">
+					<div class="title">注册 Flyme 账号</div>
+					<div class="error">
+						<img src="img/error-ico.png" alt="错误"/>
+						<span class="err-msg"></span>
+						<img class="close" src="img/close-ico.png" alt="关闭" />
+					</div>
+					<div class="ok">
+						<img src="img/ok.png" alt="成功"/>
+						<span class="ok-msg">注册成功,3秒后跳转到登录页面</span>
+					</div>
+					<input type="text" name="uname" id="uname" value="" placeholder="用户名"/>
+					<input type="password" name="upwd1" id="upwd1" value="" placeholder="密码"/>
+					<input type="password" name="upwd2" id="upwd2" value="" placeholder="确认密码"/>
+					<input type="text" name="phone" id="phone" value="" placeholder="电话号码"/>
+					<input type="text" name="email" id="email" value="" placeholder="邮箱地址"/>
+					<input type="text" name="username" id="username" value="" placeholder="真实姓名"/>
+					<select name="sex">
+						<option value="0">男</option>
+						<option value="1">女</option>
+						<option value="-1" selected>保密</option>
+					</select>
+					<div class="policy">
+						点击立即注册，即表示您同意并愿意遵守
+						<a href="" target="_blank">Eleme服务协议</a> 
+						和 <a href="" target="_blank">法律声明</a>
+					</div>
+					<input class="register" id="submit" type="button" value="立即注册" />
+				</form>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="f-container">
+				<ul class="one">
+					<li><a href="javascript:void(0)">关于一乐</a></li>
+					<span></span>
+					<li><a href="javascript:void(0)">工作机会</a></li>
+					<span></span>
+					<li><a href="javascript:void(0)">联系我们</a></li>
+					<span></span>
+					<li><a href="javascript:void(0)">法律声明</a></li>
+					<span></span>
+				</ul>
+				<ul class="two">
+					<li>客服热线&nbsp;&nbsp;&nbsp;&nbsp;400-788-3333</li>
+					<li><a href="#">在线客服</a></li>
+				</ul>
+				<div class="link">
+					<a href="http://weibo.com/meizumobile" target="_blank"><img class="weibo" src="img/weibo.png" alt="微博"/></a>
+					<a class="wx-h" href="javascript:"><img class="weixin" src="img/weixin.png" alt="微信"/></a>
+					<a href="https://user.qzone.qq.com/2762957059" target="_blank"><img class="zone" src="img/qqzone.png" alt="QQ空间"/></a>
+					<img class="erweima" src="img/weixin-erweima.png"/>
+				</div>
+			</div>
+			<div class="foot-dsc">
+				<span>©2018 Meizu Telecom Equipment Co., Ltd. All rights reserved.</span>
+				<a href="http://www.miitbeian.gov.cn/" target="_blank">备案号: 粤ICP备13003602号-4</a>
+				<a href="http://www3.res.meizu.com/static/cn/widget/footer/images/icp2_b2dcb54.jpg" target="_blank">经营许可证编号: 粤B2-20130198</a>
+				<a href="http://www2.res.meizu.com/zh_cn/images/common/com_licence.jpg" target="_blank">营业执照</a>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/register.js"></script>
+		<script type="text/javascript">
+			//显示微信二维码公众号
+			var weixin = document.querySelector(".weixin");
+			weixin.onmouseenter = function(){
+				this.parentNode.parentNode.lastElementChild.style.display = "block";
+			}
+			weixin.onmouseleave = function(){
+				this.parentNode.parentNode.lastElementChild.style.display = "none";
+			}
+			//点击错误信息关闭按钮
+			$(".error>.close").click(function(e){
+				$(this).parent().css("visibility", "hidden");
+			})
+		</script>
+	</body>
+</html>

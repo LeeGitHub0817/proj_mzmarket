@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>一乐商城-用户中心</title>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fonticon.css"/>
+		<link rel="stylesheet" type="text/css" href="css/user_center.css"/>
+		<link rel="icon" href="img/favicon.ico"/>
+		<style type="text/css">
+			.float-left{
+				float: left;
+			}
+			.float-right{
+				float: right;
+			}
+			#content>.c-container{
+				width: 1240px;
+				margin: auto;
+			}
+			#content>.c-container>.core-con:after{
+				display: block;
+				content: "";
+				clear: both;
+			}
+			#content>.c-container>.core-con>.left-link{
+				float: left;
+				width: 200px;
+				font-size: 14px;
+				color: #666;
+				background-color: #fafafc;
+				padding-left: 25px;
+				padding-bottom: 5px;
+			}
+			#content>.c-container>.core-con>.left-link:before{
+				display: table;
+				content: "";
+			}
+			#content>.c-container>.core-con>.left-link>h4{
+				margin: 15px 0;
+				height: 21px;
+				line-height: 21px;
+			}
+			#content>.c-container>.core-con>.left-link>ul>li{
+				margin: 15px 0;
+				padding-left: 20px;
+			}
+			#content>.c-container>.core-con>.left-link>ul>li>a{
+				color: #666;
+			}
+			#content>.c-container>.core-con>.left-link>ul>li>a:hover{
+				color: #00c3f5;
+			}
+			#content>.c-container>.core-con>.left-link>h4>span:before{
+				color: #000000;
+				font-size: 18px;
+				margin-right: 5px;
+			}
+			
+			#content>.c-container>.core-con>.right-userinf{
+				border: 1px solid #f3f3f3;
+				padding: 35px 50px;
+				width: 880px;
+				margin-left: 15px;
+				font-size: 14px;
+				color: #999;
+			}
+			#content>.c-container>.core-con>.right-userinf:after{
+				display: block;
+				content: "";
+				clear: both;
+			}
+			#content>.c-container>.core-con>.right-userinf>.one{
+				border: 5px solid #fafafc;
+			}
+			#content>.c-container>.core-con>.right-userinf>.two{
+				margin-left:100px;
+				margin-right:200px;
+			}
+			#content>.c-container>.core-con>.right-userinf>.two>h3{
+				color: #333333;
+				font-weight: normal;
+				margin-bottom: 20px;
+				font-size: 20px;
+			}
+			#content>.c-container>.core-con>.right-userinf>.three>p:not(:last-child){
+				margin-bottom: 10px;
+			}
+			#content>.c-container>.core-con>.right-userinf>.three>p:last-child{
+				margin-top: 10px;
+			}
+			#content>.c-container>.core-con>.right-userinf>.three>p>a:hover{
+				color: #00c3f5;
+			}
+			
+			#content>.c-container>.core-con>.right-order{
+				border: 1px solid #f3f3f3;
+				margin-left: 15px;
+				margin-top: 15px;
+				width: 500px;
+			}
+			#content>.c-container>.core-con>.right-order>.head-title{
+				padding: 15px 10px;
+				background-color: #fafafc;
+				border-bottom: 1px solid #f3f3f3;
+				font-size: 14px;
+			}
+			#content>.c-container>.core-con>.right-order>.head-title>a{
+				float: right;
+			}
+			#content>.c-container>.core-con>.right-order>.head-title>a:hover{
+				color: #00c3f5;
+			}
+			#content>.c-container>.core-con>.right-order>.status{
+				padding: 60px 40px;
+			}
+			#content>.c-container>.core-con>.right-order>.status>.wait-pay{
+				margin-bottom: 70px;
+			}
+			#content>.c-container>.core-con>.right-order>.status>.wait-pay>span:before{
+				color: #FFFFFF;
+			}
+			#content>.c-container>.core-con>.right-order>.status>.wait-pay>span{
+				background-color: #f56313;
+				font-size: 50px;
+				padding: 20px;
+				border-radius: 50%;
+			}
+			
+			#content>.c-container>.core-con>.right-order>.status>div{
+				margin-right: 50px;
+			}
+			#content>.c-container>.core-con>.right-order>.status>.wait-deliver>span:before{
+				color: #FFFFFF;
+			}
+			#content>.c-container>.core-con>.right-order>.status>.wait-deliver>span{
+				background-color: #00c3f5;
+				font-size: 50px;
+				padding: 20px;
+				border-radius: 50%;
+			}
+			.status .float-right p:first-child{
+				margin-bottom: 10px;
+			}
+			.status .float-right a{
+				font-size: 14px;
+				color: #999999;
+			}
+			.status .float-right a:hover{
+				color: #00C3F5;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header"></div>
+		
+		<div id="content">
+			<div class="c-container">
+				<div class="title" style="font-size: 14px; margin: 15px 0;">
+					<a style="color: #666;" href="index.html">首页</a>
+					<span>&nbsp;&nbsp;>&nbsp;&nbsp;</span>
+					<span style="color: #00c3f5;">我的个人中心</span>
+				</div>
+				<div class="core-con">
+					<div class="left-link">
+						<h4><span class="icon-order"></span>订单中心</h4>
+						<ul>
+							<li><a href="javascript:void(0)">我的订单</a></li>
+							<li><a href="javascript:void(0)">我的回购单</a></li>
+							<li><a href="javascript:void(0)">我的意外保</a></li>
+						</ul>
+						<h4><span class="icon-user"></span>个人中心</h4>
+						<ul>
+							<li><a href="javascript:void(0)">地址管理</a></li>
+							<li><a href="javascript:void(0)">我的收藏</a></li>
+							<li><a href="javascript:void(0)">消息提醒</a></li>
+							<li><a href="javascript:void(0)">建议反馈</a></li>
+						</ul>
+						<h4><span class="icon-wallet"></span>资产中心</h4>
+						<ul>
+							<li><a href="javascript:void(0)">我的优惠券</a></li>
+							<li><a href="javascript:void(0)">我的红包</a></li>
+							<li><a href="javascript:void(0)">我的回购金</a></li>
+						</ul>
+						<h4><span class="icon-service"></span>服务中心</h4>
+						<ul>
+							<li><a href="javascript:void(0)">退款/退换货跟踪</a></li>
+							<li><a href="javascript:void(0)">意外保</a></li>
+							<li><a href="javascript:void(0)">以旧换新</a></li>
+						</ul>
+					</div>
+					<div class="right-userinf float-left">
+						<div class="one float-left"><img width="139" height="139" src="img/info.jpg" alt="" /></div>
+						<div class="two float-left">
+							<h3>EleMeEle</h3>
+							<p>欢迎你回来</p>
+						</div>
+						<div class="three float-left">
+							<p>Eleme账号：</p>
+							<p>绑定手机号：1350****006</p>
+							<p>绑定邮箱：未绑定</p>
+							<p><a href="javascript:void(0)">修改个人信息 ></a></p>
+						</div>
+					</div>
+					<div class="right-order float-left">
+						<div class="head-title">
+							<span>订单状态</span>
+							<a href="javascript:void(0)">查看全部订单状态></a>
+						</div>
+						<div class="status">
+							<div class="wait-pay">
+								<span class="icon-wallet"></span>
+								<div class="float-right">
+									<p>待付款订单：0</p>
+									<p><a href="javascript:void(0)">查看全部待付款订单 ></a></p>
+								</div>
+							</div>
+							<div class="wait-deliver">
+								<span class="icon-package"></span>
+								<div class="float-right">
+									<p>待发货订单：0</p>
+									<p><a href="javascript:void(0)">查看全部待发货订单 ></a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		
+		<div id="footer"></div>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/header.js"></script>
+		<script src="js/footer.js"></script>
+	</body>
+</html>

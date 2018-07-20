@@ -1,0 +1,324 @@
+/***头部相关设置***/
+#header{
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #efefef;
+	position: relative;
+}
+#header>.header-container{
+	width: 1240px;
+	margin: auto;
+}
+#header>.header-container:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+#header>.header-container>a{
+	float: left;
+	height: 42px;
+	width: 100px;
+	padding: 19px 0;
+}
+#header>.header-container>ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+#header>.header-container>.one{
+	float: right;
+	padding: 24px 0;
+}
+#header>.header-container>.one>li{
+	float: left;
+	margin-left: 30px;
+}
+/***1.用户信息***/
+/***1.1登陆前***/
+#header>.header-container>.one>.common-user>.loginlist{
+	position: relative;
+}
+#header>.header-container>.one>.common-user>.loginlist:hover ul{
+	display: block;
+}
+#header>.header-container>.one>.common-user>.loginlist>ul{
+	position: absolute;
+	left: -35px;
+	background-color: #FFFFFF;
+	z-index: 10;
+	width: 90px;
+	box-shadow: 0 0 0.5px 0.5px #DCDCDC;
+	display: none;
+}
+#header>.header-container>.one>.common-user>.loginlist>ul>li>a{
+	display: block;
+	padding: 5px 20px;
+	font-size: 12px;
+	margin: 5px 0;
+}
+#header>.header-container>.one>.common-user>.loginlist>ul>li>a:hover{
+	color: #31a5e7;
+	background-color: #EEEEEE;
+}
+#header>.header-container>.one>.common-user>.loginlist>a{
+	display: block;
+	width: 24px;
+	height: 24px;
+	margin-top: 5px;
+}
+#header>.header-container>.one>.common-user>.loginlist>a>img{
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+/***1.2登陆后***/
+#header>.header-container>.one>.common-user>.welcomelist{
+	display: none;
+	position: relative;
+}
+#header>.header-container>.one>.common-user>.welcomelist:hover ul{
+	display: block;
+}
+#header>.header-container>.one>.common-user>.welcomelist>ul{
+	position: absolute;
+	left: -35px;
+	background-color: #FFFFFF;
+	z-index: 10;
+	width: 90px;
+	box-shadow: 0 0 0.5px 0.5px #DCDCDC;
+	display: none;
+}
+#header>.header-container>.one>.common-user>.welcomelist>ul>li>a{
+	display: block;
+	padding: 5px 20px;
+	font-size: 12px;
+	margin: 5px 0;
+}
+#header>.header-container>.one>.common-user>.welcomelist>ul>li>a:hover{
+	color: #31a5e7;
+	background-color: #EEEEEE;
+}
+#header>.header-container>.one>.common-user>.welcomelist>a{
+	display: block;
+	width: 24px;
+	height: 24px;
+	margin-top: 5px;
+}
+#header>.header-container>.one>.common-user>.welcomelist>a>img{
+	display: block;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+}
+
+/***购物车图标***/
+#header>.header-container>.one>.common-cart>span{
+	position: relative;
+	display: block;
+	width: 24px;
+	height: 24px;
+	margin-top: 5px;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart{
+	display: none;
+	position: absolute;
+	top: 25px;
+	left: -330px;
+	width: 350px;
+	min-height: 120px;
+	background-color: #FFFFFF;
+	border: 1px solid #efefef;
+	border-radius: 3px;
+	font-size: 12px;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>p{
+	color: #999;
+	padding-top: 15px;
+	padding-left: 20px;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail{
+	margin-top: 10px;
+	transition: all .5s linear;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail:hover{
+	background-color: #F5F5F5;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail>div{
+	float: left;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail>div.img{
+	margin-left: 20px;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail>div.info{
+	margin-left: 50px;
+	margin-top: 15px;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail>div.info>p:first-child{
+	margin-bottom: 5px;
+	font-weight: 600;
+	width: 80px;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail>div.info>p:last-child{
+	color: #999999;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail>div.option{
+	margin-left: 50px;
+	margin-top: 15px;
+	text-align: right;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail>div.option>p:first-child{
+	margin-bottom: 5px;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail>div.option>p:last-child>a:hover{
+	color: #00c3f5;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.pro-detail>div.img>a>img{
+	width: 60px;
+	height: 60px;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.im-buy:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.im-buy{
+ 	height: 70px;
+ 	line-height: 70px;
+ 	background-color: #F5F5F5;
+ 	border-top: 1px solid #efefef;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.im-buy>span:first-child{
+	float: left;
+	margin-left: 15px;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.im-buy>span:first-child>strong{
+	color: #e02b41;
+	margin: 0 5px;
+}
+#header>.header-container>.one>.common-cart>span>div.store-cart>div.im-buy>span:last-child{
+	float: right;
+	background-color: #00c3f5;
+	border-radius: 3px;
+	color: #FFFFFF;
+	padding: 0px 15px;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 15px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+#header>.header-container>.one>.common-cart>span>a>img{
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+#header>.header-container>.one>.common-cart>span>div.showCartNum{
+	position: absolute;
+	right: 0;
+	top: -7px;
+	padding: 0px 2px;
+	background-color: #E22841;
+	color: #FFFFFF;
+	font-size: 12px;
+	border-radius: 50%;
+}
+
+/***搜索框***/
+#header>.header-container>.one>.search{
+	position: relative;
+}
+#header>.header-container>.one>.search>input{
+	outline: 0;
+	font-size: 12px;
+	height: 28px;
+	padding-left: 15px;
+	padding-right: 30px;
+	border-radius: 20px;
+	border: 1px solid #999999;
+}
+#header>.header-container>.one>.search>a{
+	position: absolute;
+	top: 4px;
+	right: 10px;
+	overflow: hidden;
+}
+#header>.header-container>.one>.search>a>span{
+	font-size: 22px;
+}
+
+/***下拉菜单栏***/
+#header>.header-container>.two{
+	float: right;
+}
+#header>.header-container>.two>li{
+	float: left;
+	font-size: 14px;
+}
+#header>.header-container>.two>li>a{
+	display: block;
+	color: #333;
+	padding: 33px 10px 31px 10px;
+	transition: all .3s linear;
+}
+#header>.header-container>.two>li>a:hover{
+	color: #00c3f5;
+}
+/***弹出菜单的样式***/
+#header>.header-container>.two>li.menu-sub>.header-sub{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 80px;
+	z-index: 1000;
+	background-color: #FFFFFF;
+	height: 0px;
+	overflow: hidden;
+}
+#header>.header-container>.two>li.menu-sub>.header-sub.active{
+	height: 147px;
+	transition: all .8s linear;
+}
+#header>.header-container>.two>li.menu-sub>.header-sub>.header-sub-container{
+	width: 1240px;
+	margin: auto;
+}
+#header>.header-container>.two>li.menu-sub>.header-sub>.header-sub-container>ul{
+	padding-left: 150px;
+}
+#header>.header-container>.two>li.menu-sub>.header-sub>.header-sub-container>ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+#header>.header-container>.two>li.menu-sub>.header-sub>.header-sub-container>ul>li{
+	float: left;
+	transform: translateX(100px);
+	opacity: 0;
+}
+#header>.header-container>.two>li.menu-sub>.header-sub>.header-sub-container>ul>li.active{
+	transform: translateX(0);
+	opacity: 1;
+	transition: all 1s linear;
+}
+#header>.header-container>.two>li.menu-sub>.header-sub>.header-sub-container>ul>li>a{
+	display: block;
+	padding: 106px 7px 9px;
+	width: 125px;
+	font-size: 12px;
+	color: #666;
+	background-size: 100px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+#header>.header-container>.two>li.menu-sub>.header-sub>.header-sub-container>ul>li>a>em{
+	display: block;
+}

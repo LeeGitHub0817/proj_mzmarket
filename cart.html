@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车-我的购物车</title>
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="css/cart.css" />
+		<link rel="stylesheet" href="css/fonticon.css" />
+		<link rel="icon" href="img/favicon.ico"/>
+		<style>
+			#cart>.cart-container>.cart-empty:before{
+				content: "";
+				display: table;
+			}
+			#cart>.cart-container>.cart-empty{
+				margin-top: 20px;
+			}
+			#cart>.cart-container>.cart-empty>.cart-empty-content:not(last-child){
+				padding: 100px 0;
+				text-align: center;
+			}
+			#cart>.cart-container>.cart-empty>.cart-empty-content>.cart-empty-left{
+				display: inline-block;
+			}
+			#cart>.cart-container>.cart-empty>.cart-empty-content>.cart-empty-right{
+				display: inline-block;
+				vertical-align: top;
+				text-align: left;
+				margin-left: 40px;
+				color: #666;
+			}
+			#cart>.cart-container>.cart-empty>.cart-empty-content>.cart-empty-right>p{
+				margin-top: 20px;
+				font-size: 14px;
+			}
+			#cart>.cart-container>.cart-empty>.cart-empty-content>.cart-empty-right>div{
+				margin-top: 30px;
+			}
+			#cart>.cart-container>.cart-empty>.cart-empty-content>.cart-empty-right>div>a{
+				background-color: #00c3f5;
+				border-color: #00c3f5;
+				color: #fff;
+				font-size: 14px;
+				padding: 7px 15px;
+				border-radius: 3px;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header"></div>
+		
+		<div id="cart">
+			<div class="cart-container">
+				<table class="cart-table">
+					<thead class="cart-head">
+						<tr>
+							<th colspan="2">
+								<div>
+									<div id="checkAllHead" style="vertical-align: middle;" class=""></div>
+									<span style="vertical-align: middle;">全选</span>
+								</div>
+							</th>
+							<th style="text-align: left;">商品</th>
+							<th>单价(元)</th>
+							<th>数量</th>
+							<th>小计(元)</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody class="cart-body">
+						<!--<tr>
+							<td>
+								<div style="vertical-align: middle;" class="icon-select"></div>
+							</td>
+							<td>
+								<img src="img/product_detail/pro7/sm/mzpro7sm1.png" alt="" />
+							</td>
+							<td>
+								<p>魅族 PRO 7</p>
+								<p>全网公开版 静谧黑 4GB+64GB</p>
+							</td>
+							<td>
+								<span>￥1299</span>
+							</td>
+							<td>
+								<div>
+									<button class="reduce">-</button>
+									<input type="text" name="num" id="num" value="1" />
+									<button class="add">+</button>
+								</div>							
+							</td>
+							<td>
+								<span>￥1299</span>
+							</td>
+							<td>
+								<a href="#">删除</a>
+							</td>
+						</tr>-->
+					</tbody>
+					<tfoot class="cart-foot">
+						<tr>
+							<td colspan="2">
+								<div id="checkAllFoot" style="vertical-align: middle;" class=""></div>
+								<span style="vertical-align: middle;">全选</span>
+							</td>
+							<td class="two" colspan="2">
+								<p style="font-size: 14px;">共<strong style="margin: 0 5px;"></strong>件商品，
+									已选择<strong  style="margin: 0 5px; color: #00A7EB;"></strong>件</p>
+							</td>
+							<td class="three" colspan="3" style="text-align: right;">
+								<div>
+									<span style="font-size: 14px;">合计(不含运费)：
+										<strong style="color: #E02B41; font-size: 20px;">￥</strong>
+										<strong style="color: #E02B41; font-size: 20px;"></strong>
+									</span>
+									<button>去结算</button>
+								</div>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+				<!--<div class="cart-empty">
+					<div class="cart-empty-content">
+						<div class="cart-empty-left">
+							<img src="img/notfound.png"/>
+						</div>
+						<div class="cart-empty-right">
+							<h3>你还没有登录</h3>
+							<p>登录后可显示您账号中加入的商品哦</p>
+							<div><a href="login.html">去登录</a></div>
+						</div>
+					</div>
+				</div>-->
+			</div>
+		</div>
+		<div id="footer"></div>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/header.js"></script>
+		<script src="js/footer.js"></script>
+		<script src="js/cart.js"></script>
+	</body>
+</html>

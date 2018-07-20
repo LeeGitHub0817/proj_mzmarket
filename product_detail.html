@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/product_detail.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<link rel="stylesheet" href="css/fonticon.css"/>
+		<link rel="icon" href="img/favicon.ico"/>
+		<style>
+			@keyframes slideInDown{
+				0%{
+					transform: translateY(-100px);
+					visibility: visible;
+				}
+				100%{
+					transform: translateY(0);
+				}
+			}
+			#detailFast{
+				display: none;
+				width: 100%;
+				height: 80px;
+				background-color: rgba(255, 255, 255, 1);
+				opacity: 0.8;
+				border-bottom: 1px solid #DCDCDC;
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+			#detailFast.fixed{
+				display: block;
+				animation: slideInDown 1s ease;
+			}
+			#detailFast>.fixed-container{
+				width: 1240px;
+				margin: auto;
+			}
+			#detailFast>.fixed-container:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			#detailFast>.fixed-container>ul>li>a{
+				float: left;
+				padding: 0 20px;
+				font-size: 16px;
+				height: 80px;
+				line-height: 80px;
+			}
+			#detailFast>.fixed-container>ul{
+				display: none;
+			}
+			#detailFast>.fixed-container>ul.show{
+				display: block;
+			}
+			#detailFast>.fixed-container>ul>li>a.active{
+				border-bottom: 1px solid #00c3f5;
+				color: #00c3f5;
+			}
+			#detailFast>.fixed-container>.shortcut{
+				width: 600px;
+				float: right;
+			}
+			#detailFast>.fixed-container>.shortcut>.shortcut-con:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			#detailFast>.fixed-container>.shortcut>.shortcut-con>.buyBtn-con{
+				float: right;
+			}
+			#detailFast>.fixed-container>.shortcut>.shortcut-con>.buyBtn-con>.buyBtn{
+				position: relative;
+				padding: 10px 20px;
+				background-color: #00c3f5;
+				color: #FFFFFF;
+				border-radius: 3px;
+				top: 30px;
+			}
+			#detailFast>.fixed-container>.shortcut>.shortcut-con>.info-con{
+				position: relative;
+				top: 20px;
+				float: right;
+				color: #333;
+				text-align: right;
+				margin-right: 20px;
+				font-size: 16px;
+			}
+			#detailFast>.fixed-container>.shortcut>.shortcut-con>.info-con>.pname{
+				font-weight: 500;
+			}
+			#detailFast>.fixed-container>.shortcut>.shortcut-con>.info-con>.price{
+				color: #e02b41;
+				font-size: 18px;
+			}
+			#detailFast>.fixed-container>.shortcut>.shortcut-con>.info-con>.spec{
+				font-size: 12px;
+				color: #999;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div id="page-detail">
+			<div class="link"><a href="index.html">首页</a><span>&gt;</span><span class="link-title"></span></div>
+			<div class="container">
+				<div class="priview">
+					<div class="mdimg">
+						<div style="text-align: center;"><img style="width: 110px; height: 110px;" src="img/lazyload-b3704113c8.gif"/></div>
+						<!--<img src="img/product_detail/pro7/md/mzpro7md1.png"/>-->
+						<!--<img src="img/product_detail/pro7/md/mzpro7md2.png"/>
+						<img src="img/product_detail/pro7/md/mzpro7md3.png"/>
+						<img src="img/product_detail/pro7/md/mzpro7md4.png"/>-->
+					</div>
+					<ul class="smimg">
+						<div style="text-align: center;"><img style="width: 110px; height: 110px;" src="img/lazyload-b3704113c8.gif"/></div>
+						<!--<li>
+							<img src="img/product_detail/pro7/sm/mzpro7sm1.png" data-md="img/product_detail/pro7/md/mzpro7md1.png"/>
+						</li>
+						<li>
+							<img src="img/product_detail/pro7/sm/mzpro7sm2.png" data-md="img/product_detail/pro7/md/mzpro7md2.png"/>
+						</li>
+						<li>
+							<img src="img/product_detail/pro7/sm/mzpro7sm3.png" data-md="img/product_detail/pro7/md/mzpro7md3.png"/>
+						</li>
+						<li>
+							<img src="img/product_detail/pro7/sm/mzpro7sm4.png" data-md="img/product_detail/pro7/md/mzpro7md4.png"/>
+						</li>-->
+					</ul>
+				</div>
+				<div class="property">
+					<h2 class="title"></h2>
+					<p class="subtitle"></p>
+					<div class="price-ticket">
+						<div class="price"><span>价</span><span>格：</span><span></span></div>
+						<div class="ticket-container">
+							<div style="text-align: center;"><img src="img/loading.gif"/></div>
+							<!--<div class="ticket">
+								<span>领</span><span>券：</span>
+								<span class="desc">满1999减400</span>
+								<span class="desc">满2399减500</span>
+								<span class="desc">满2799减600</span>
+								<a href="javascript:">更多&gt;</a>
+							</div>-->
+						</div>
+					</div>
+					<div class="specification">
+						<span class="spec">规<span></span><span>格：</span></span>
+						<ul class="container">
+							<div style="text-align: center;"><img src="img/loading.gif"/></div>
+							<!--<li>
+								<a href="">
+									<img src="img/product_detail/pro7/gold.png"/>
+									<span>香槟金&nbsp;4GB+64GB</span>
+								</a>
+							</li>
+							<li><a href="">
+									<img src="img/product_detail/pro7/gold.png"/>
+									<span>香槟金&nbsp;4GB+128GB</span>
+								</a></li>
+							<li>
+								<a href="">
+									<img src="img/product_detail/pro7/black.png"/>
+									<span>静谧黑&nbsp;4GB+64GB</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/product_detail/pro7/black.png"/>
+									<span>静谧黑&nbsp;4GB+128GB</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/product_detail/pro7/black-y.png"/>
+									<span>曜影黑&nbsp;4GB+64GB</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/product_detail/pro7/black-y.png"/>
+									<span>曜影黑&nbsp;4GB+128GB</span>
+								</a>
+							</li>-->
+						</ul>
+					</div>
+					<hr class="sep"/>
+					<div class="other-options">
+						<div class="support">
+							<span class="one">支</span><span class="one">持：</span>
+							<span><img src="img/product_detail/yes.png" alt="" />花呗分期</span>
+							<span><img src="img/product_detail/yes.png" alt="" />百城速达</span>
+							<span><img src="img/product_detail/yes.png" alt="" />顺丰包邮</span>
+							<span><img src="img/product_detail/yes.png" alt="" />7天无理由退货</span>
+						</div>
+						<div class="service">
+							<span>服</span><span>务：</span>
+							<span>本商品由 一乐 负责发货并提供售后服务</span>
+							<span><img src="img/product_detail/service.png"/>在线客服</span>
+						</div>
+						<div class="count">
+							<span>数</span><span>量：</span>
+							<span class="reduce">-</span>
+							<input class="num" type="text" name="num" id="num" value="1" />
+							<span class="add">+</span>
+						</div>
+						<div class="buy-button">
+							<a class="buy" href="javascript:void(0)">立即购买</a>
+							<a class="cart" href="javascript:void(0)">加入购物车</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page-detail-tabs">
+			<ul class="tabs-button">
+				<li>
+					<a class="active" href="#content1">商品详情</a>
+					<a href="#content2">规格参数</a>
+					<a href="#content3">常见问题</a>
+				</li>
+			</ul>
+			<div class="container">
+				<div style="display: block;" id="content1">
+					<div style="text-align: center;"><img style="width: 110px; height: 110px;" src="img/lazyload-b3704113c8.gif"/></div>
+				</div>
+				<div id="content2">
+					<div style="text-align: center;"><img style="width: 110px; height: 110px;" src="img/lazyload-b3704113c8.gif"/></div>
+				</div>
+				<div id="content3">
+					<div style="text-align: center;"><img style="width: 110px; height: 110px;" src="img/lazyload-b3704113c8.gif"/></div>
+				</div>
+			</div>
+		</div>
+		<div id="recommend">
+			<div class="title-btn">
+				<h3>为你推荐</h3>
+				<div class="btn">
+					<a href="#" class="left"><img src="img/product_detail/back.png"/></a>
+					<a href="#" class="right active"><img src="img/product_detail/more.png"/></a>
+				</div>
+			</div>
+			<div class="product">
+				<ul class="container">
+					<li>
+						<a href="">
+							<div class="pic"><img width="180" height="180" src="img/recommand/usb.png"/></div>
+							<div class="desc">
+								<h4>魅族Micro USB金属数据线</h4>
+								<h6>耐用 才好用</h6>
+								<p><span>￥</span><span>29</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="pic"><img width="180" height="180" src="img/recommand/tixudao.png"/></div>
+							<div class="desc">
+								<h4>飞科剃须刀FS360</h4>
+								<h6>强劲动力 三头浮动剃须 双环贴面</h6>
+								<p><span>￥</span><span>69</span></p>
+							</div>
+						</a>
+					</li>
+					<li><a href="">
+							<div class="pic"><img width="180" height="180" src="img/recommand/bluetooth.png"/></div>
+							<div class="desc">
+								<h4>魅族 蓝牙通话耳机</h4>
+								<h6>戴得舒适 听得清晰</h6>
+								<p><span>￥</span><span>89</span></p>
+							</div>
+						</a></li>
+					<li>
+						<a href="">
+							<div class="pic"><img width="180" height="180" src="img/recommand/shouhuan.png"/></div>
+							<div class="desc">
+								<h4>乐心运动手环 ziva plus</h4>
+								<h6>6期免息 专业运动 精于心率</h6>
+								<p><span>￥</span><span>499</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="pic"><img width="180" height="180" src="img/recommand/shoujike.png"/></div>
+							<div class="desc">
+								<h4>魅蓝E3 亲肤保护壳</h4>
+								<h6>亲肤材质触感，防摔防磕性能</h6>
+								<p><span>￥</span><span>29</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="pic"><img width="180" height="180" src="img/recommand/shouhuan2.png"/></div>
+							<div class="desc">
+								<h4>魅族手环</h4>
+								<h6>腕间流动的心率专家</h6>
+								<p><span>￥</span><span>169</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="pic"><img width="180" height="180" src="img/recommand/tiemo.png"/></div>
+							<div class="desc">
+								<h4>魅蓝E3 全贴合防爆保护膜</h4>
+								<h6>坚韧材质，无惧摩擦冲击</h6>
+								<p><span>￥</span><span>29</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="pic"><img width="180" height="180" src="img/recommand/zhengtou.png"/></div>
+							<div class="desc">
+								<h4>天然乳胶枕</h4>
+								<h6>福满园MYLEFO泰国天然乳胶枕头护颈椎枕</h6>
+								<p><span>￥</span><span>128</span></p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="footer"></div>
+		<div id="detailFast">
+			<div class="fixed-container">
+				<ul>
+					<li>
+						<a class="active" href="#content1">商品详情</a>
+						<a href="#content2">规格参数</a>
+						<a href="#content3">常见问题</a>
+					</li>
+				</ul>
+				<div class="shortcut">
+					<div class="shortcut-con" >
+						<div class="buyBtn-con"><a class="buyBtn" href="#">现在购买</a></div>
+						<div class="info-con">
+							<strong class="pname">魅族 PRO 7</strong>
+							<strong class="price">￥1299</strong>
+							<p class="spec">静谧黑 4GB+64GB</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/header.js"></script>
+		<script src="js/footer.js"></script>
+		<script src="js/product_detail.js"></script>
+		<script type="text/javascript">
+			//点击商品详情、规格参数、常见问题的切换代码
+			$("#page-detail-tabs>.tabs-button").on("click", "a", function(e){
+				e.preventDefault();
+				var tar = $(this);
+				tar.addClass("active").siblings().removeClass("active");
+				var id = tar.attr("href");
+				$(id).css("display", "block").siblings().css("display", "none");
+			});
+			//点击商品推荐的左右箭头按钮的代码
+			$("#recommend>.title-btn>.btn").on("click", "a.right", function(e){
+				e.preventDefault();
+				$("#recommend>.product>ul.container").animate({left: "-745px"}, 0);
+				$(this).removeClass("active").siblings().addClass("active"); 
+			});
+			$("#recommend>.title-btn>.btn").on("click", "a.left", function(e){
+				e.preventDefault();
+				$("#recommend>.product>ul.container").animate({left: "0px"}, 0);
+				$(this).removeClass("active").siblings().addClass("active");
+			});
+		</script>
+	</body>
+</html>
