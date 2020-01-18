@@ -1,10 +1,4 @@
 # 一乐手机商城
-## 项目名称：
-- 手机在线商城 (www.referenceerror.top)
-## 开发工具
-- WebStorm+Hbulider+XAMPP+Chrome
-## 开发技术栈
-- HTML+CSS+JS+JQuery+PHP+MySql
 ## 项目职责
 - 负责整个项目的编写与调试，处理后台传输过来的数据，进行动态展示。对商品信息分页处理，动画特效制作。
 ## 项目描述
