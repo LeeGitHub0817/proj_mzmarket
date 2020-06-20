@@ -4,5 +4,4 @@
 ## 项目描述
 - 该项目使用CSS+HTML来实现了页面效果的展示，使用JS+JQuery来实现用户的交互，有引导主页、登录、注册、搜索产品、购物车、个人主页等相关功能
 
-图片打包地址：https://pan.baidu.com/s/1QiqEyntWog-YXaTqm-ocfw
 > mysite.sql为数据库脚本执行文件
